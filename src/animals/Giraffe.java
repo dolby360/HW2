@@ -9,7 +9,13 @@ import mobility.Point;
  *
  */
 
-public class Giraffe 
+public class Giraffe extends AnimalThatChews
 {
 
+	public Giraffe(String name, Point location) 
+	{
+		super(name, location);
+		this.setWeight(450);
+	}
+	
 }
