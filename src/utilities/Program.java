@@ -16,7 +16,7 @@ import mobility.Point;
 import plants.Cabbage;
 
 /**
- * @author baroh
+ *@author baroh
  *
  */
 public class Program {

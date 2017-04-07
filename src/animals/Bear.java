@@ -1,5 +1,7 @@
 package animals;
 
+import utilities.MessageUtility;
+import diet.IDiet;
 import mobility.Point;
 
 

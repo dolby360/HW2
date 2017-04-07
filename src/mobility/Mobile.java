@@ -1,7 +1,10 @@
 package mobility;
 
 import mobility.Point;
-import java.lang.Math;;
+import utilities.MessageUtility;
+import java.lang.Math;
+
+import utilities.MessageUtility;
 public class Mobile implements ILocatable
 {
 	private Point location;
@@ -21,14 +24,18 @@ public class Mobile implements ILocatable
 		return Math.sqrt( Math.pow(newPoint.getX()-this.location.getX(),2)+Math.pow(newPoint.getY()-this.location.getY(),2));
 		
 	}
-	/*public double move(Point newPoint)
+	public double move(Point newPoint)
 	{
-	
-		//Dolev-equals in Point is Copy-Constructor
-	if(this.location.equals(newPoint))
+		
+	if(!(this.location.equals(null)))
 			return 0;
-	return clacDistance(newPoint);
-	}*/
+		
+		MessageUtility.logSetter(this.getClass().getSimpleName(), "move", this.move(newPoint), true);
+			
+		this.addTotalDistance(this.calcDistance(newPoint));
+		return this.calcDistance(newPoint);
+	
+}
 	
 	
 	public Point getLocation()

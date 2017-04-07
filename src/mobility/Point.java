@@ -117,9 +117,21 @@ public class Point
 	* copy constructor 
 	* @param other other object to copy
 	*/
-	public void equals(Point other)
+	/*public void equals(Point other)
 	{
 		this.X = other.getX();
 		this.Y = other.getY();
+	}*/
+	public boolean equals(Point other)
+	{
+if(other==null)
+	return false;
+
+		this.X = other.getX();
+		this.Y = other.getY();
+	return true;
 	}
+
+
+
 }

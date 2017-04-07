@@ -1,5 +1,6 @@
 package animals;
 
+import utilities.MessageUtility;
 import mobility.Mobile;
 import mobility.Point;
 import food.EFoodType;
@@ -10,13 +11,14 @@ public abstract class Animal extends Mobile implements IEdible
 {
 	private String name;
 	private double weight;
-	private IDiet diet;
+	protected IDiet diet;
 	
 	public Animal(String name,Point location)
 	{
 		super(location);
-		this.name = name;
+		this.setName(name);
 	}
+	public abstract boolean setDiet(IDiet diet);
 	public void makeSound()
 	{
 		
@@ -38,7 +40,25 @@ public abstract class Animal extends Mobile implements IEdible
 	public double getWeight() {
 		return weight;
 	}
-	public void setWeight(double weight) {
+	public boolean setWeight(double weight) {
 		this.weight = weight;
+		MessageUtility.logSetter(this.getClass().getSimpleName(), "setWeight", setWeight(weight), true);
+	return true;
 	}
+	public boolean setName(String name) {
+		if(name==null)
+			return false;
+		MessageUtility.logSetter(this.getClass().getSimpleName(), "setName", setName(name), true);
+		this.name = name;
+		return true;
+	}
+	/*public boolean setDiet(String name) {
+		if(name==null)
+			return false;
+		MessageUtility.logSetter(this.getClass().getSimpleName(), "setName", setName(name), true);
+		this.name = name;
+		return true;
+	}
+*/
+
 }
