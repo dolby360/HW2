@@ -7,6 +7,7 @@ import food.IEdible;
 public class Omnivore implements IDiet{
 	public boolean canEat(EFoodType food)
 	{
+		
 //		Carnivore.canEat(food);
 		return true;
 		
