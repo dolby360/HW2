@@ -1,6 +1,7 @@
 package animals;
 
 import utilities.MessageUtility;
+import diet.Carnivore;
 import diet.IDiet;
 import mobility.Point;
 
@@ -20,6 +21,8 @@ public class Bear extends AnimalThatRoar
 		super(name,new Point(100,5));
 		this.furColor = "GRAY";
 		this.setWeight(308.2);
+		IDiet ko=new Carnivore();
+		
 	}
 	
 	public void roar()
