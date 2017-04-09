@@ -13,7 +13,7 @@ public abstract class AnimalThatRoar extends Animal
 	}
 	@Override
 	public boolean setDiet(IDiet diet) {
-		MessageUtility.logSetter(this.getClass().getSimpleName(), "setDiet", 1, true);
+		MessageUtility.logSetter(this.getClass().getSimpleName(), "setDiet",diet.getClass().getSimpleName(), true);
 		this.diet=diet;
 
 		// TODO Auto-generated method stub

@@ -9,7 +9,7 @@ import diet.IDiet;
 
 public abstract class Animal extends Mobile implements IEdible 
 {
-	private String name;
+	private String Name;
 	private double weight;
 	protected IDiet diet;
 	
@@ -18,7 +18,9 @@ public abstract class Animal extends Mobile implements IEdible
 		super(location);
 		this.setName(name);
 	}
+	
 	public abstract boolean setDiet(IDiet diet);
+	
 	public void makeSound()
 	{
 		
@@ -32,25 +34,36 @@ public abstract class Animal extends Mobile implements IEdible
 		return true;
 	}
 	
-	@Override
-	public EFoodType getFoodtype() {
-		// TODO Auto-generated method stub
+
+	public EFoodType getFoodtype() 
+	{
 		return null;
 	}
-	public double getWeight() {
+	
+	public double getWeight() 
+	{
 		return weight;
 	}
-	public boolean setWeight(double weight) {
+	
+	public boolean setWeight(double weight) 
+	{
 		this.weight = weight;
-		MessageUtility.logSetter(this.getClass().getSimpleName(), "setWeight", setWeight(weight), true);
-	return true;
+		MessageUtility.logSetter(this.getClass().getSimpleName(), "setWeight", weight, true);
+		return true;
 	}
-	public boolean setName(String name) {
+	
+	public boolean setName(String name) 
+	{
 		if(name==null)
 			return false;
-		MessageUtility.logSetter(this.getClass().getSimpleName(), "setName", setName(name), true);
-		this.name = name;
+		MessageUtility.logSetter(this.getClass().getSimpleName(), "setname", name , true);
+		this.Name = name;
 		return true;
+	}
+	
+	public String getName()
+	{
+		return this.Name;
 	}
 	/*public boolean setDiet(String name) {
 		if(name==null)

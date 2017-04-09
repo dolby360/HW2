@@ -16,11 +16,10 @@ public class Lion extends AnimalThatRoar
 	
 	public Lion(String name)
 	{
-		
 		super(name,new Point(10,0));
-		IDiet ko=new Carnivore();
+		IDiet carni = new Carnivore();
 		this.setWeight(408.2);
-		super.setDiet(ko);
+		super.setDiet(carni);
 	}
 
 	
