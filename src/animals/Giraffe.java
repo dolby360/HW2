@@ -11,11 +11,23 @@ import mobility.Point;
 
 public class Giraffe extends AnimalThatChews
 {
-
-	public Giraffe(String name, Point location) 
+	private double neckLength = 0;
+	
+	public Giraffe(String name,double neck) 
 	{
-		super(name, location);
+		super(name,new Point(50,0));
 		this.setWeight(450);
+		this.setNeckLength(neck);
 	}
+	 
+	public double getNeckLength() {
+		return neckLength;
+	}
+	
+	public void setNeckLength(double neckLength) {
+		this.neckLength = neckLength;
+	}
+
+
 	
 }

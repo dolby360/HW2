@@ -113,6 +113,12 @@ public class Point
 		return Y;
 	}
 	
+	//this function is static because the tutor used Point.checkBounderies(somePoint) in Plant class
+	public static boolean cheackBounderies(Point newLocation)
+	{
+		return ((newLocation.getX() >= 0) && (newLocation.getX() <= 800) && (newLocation.getY() >= 0) && (newLocation.getY() <= 600)); 
+	}
+	
 	/**
 	* copy constructor 
 	* @param other other object to copy
@@ -124,11 +130,14 @@ public class Point
 	}*/
 	public boolean equals(Point other)
 	{
-if(other==null)
-	return false;
-
-		this.X = other.getX();
-		this.Y = other.getY();
+	if(other==null)
+	{
+		return false;
+	}
+	
+	this.X = other.getX();
+	this.Y = other.getY();
+	
 	return true;
 	}
 

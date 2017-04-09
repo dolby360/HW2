@@ -16,12 +16,12 @@ public class Bear extends AnimalThatRoar
 {	
 	private String furColor = null;
 		
-	public Bear(String name)
+	public Bear(String name,String color)
 	{
 		super(name,new Point(100,5));
-		this.furColor = "GRAY";
+		this.setFurColor(color);
 		this.setWeight(308.2);
-		IDiet ko=new Carnivore();
+		IDiet ko = new Carnivore();
 		
 	}
 	

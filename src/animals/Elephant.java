@@ -13,10 +13,11 @@ public class Elephant extends AnimalThatChews
 {
 	private double trunkLength = 1;
 	
-	public Elephant(String name)
+	public Elephant(String name,double trunk)
 	{
 		super(name,new Point(50,90));
 		this.setWeight(500);
+		this.settrunkLength(trunk);
 	}
 
 	public void chew()
@@ -24,11 +25,11 @@ public class Elephant extends AnimalThatChews
 		
 	}
 	
-	public double getTrunkLength() {
+	public double gettrunkLength() {
 		return trunkLength;
 	}
 
-	public void setTrunkLength(double trunkLength) 
+	public void settrunkLength(double trunkLength) 
 	{
 		if(trunkLength > 0.5 && trunkLength < 3)
 		{

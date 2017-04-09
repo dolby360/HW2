@@ -16,10 +16,11 @@ import mobility.Point;
 import plants.Cabbage;
 
 /**
- *@author baroh
+ *@author dolev, ben aharon,id:203723036 // partner:Reut Shukrun 208162933
  *
  */
-public class Program {
+public class Program 
+{
 
 	private static List<Animal> animals;
 	private static Bear bear;
