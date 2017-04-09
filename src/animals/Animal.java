@@ -16,10 +16,17 @@ public abstract class Animal extends Mobile implements IEdible
 	public Animal(String name,Point location)
 	{
 		super(location);
+		//###### i'm not sure about the name;
+		MessageUtility.logConstractor(this.toString(), name);
 		this.setName(name);
 	}
 	
 	public abstract boolean setDiet(IDiet diet);
+	
+	public String toString()
+	{
+		return "Animal";
+	}
 	
 	public void makeSound()
 	{
@@ -48,15 +55,18 @@ public abstract class Animal extends Mobile implements IEdible
 	public boolean setWeight(double weight) 
 	{
 		this.weight = weight;
-		MessageUtility.logSetter(this.getClass().getSimpleName(), "setWeight", weight, true);
+		MessageUtility.logSetter(this.getName(), "setWeight", weight, true);
 		return true;
 	}
 	
 	public boolean setName(String name) 
 	{
 		if(name==null)
+		{
+			MessageUtility.logSetter(null, "setName", this.getName() , false);
 			return false;
-		MessageUtility.logSetter(this.getClass().getSimpleName(), "setname", name , true);
+		}
+		MessageUtility.logSetter(name, "setName", name , true);
 		this.Name = name;
 		return true;
 	}
@@ -65,6 +75,7 @@ public abstract class Animal extends Mobile implements IEdible
 	{
 		return this.Name;
 	}
+	
 	/*public boolean setDiet(String name) {
 		if(name==null)
 			return false;

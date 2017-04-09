@@ -1,8 +1,8 @@
 package animals;
 
 import utilities.MessageUtility;
-import diet.Carnivore;
 import diet.IDiet;
+import diet.Omnivore;
 import mobility.Point;
 
 
@@ -19,10 +19,11 @@ public class Bear extends AnimalThatRoar
 	public Bear(String name,String color)
 	{
 		super(name,new Point(100,5));
-		this.setFurColor(color);
+		MessageUtility.logConstractor(this.getClass().getSimpleName(), name);
 		this.setWeight(308.2);
-		IDiet ko = new Carnivore();
-		
+		this.setFurColor(color);
+		IDiet Omni = new Omnivore();
+		super.setDiet(Omni);
 	}
 	
 	public void roar()
@@ -30,7 +31,9 @@ public class Bear extends AnimalThatRoar
 		
 	}
 	
-	public String getFurColor() {
+	public String getFurColor() 
+	{
+		MessageUtility.logGetter(this.getName(), "getFurColor", getFurColor());
 		return furColor;
 	}
 
@@ -38,12 +41,20 @@ public class Bear extends AnimalThatRoar
 		switch (furColor.toLowerCase())
 		{
 		case "white":
+			MessageUtility.logSetter(this.getName(), "setFurColor", furColor, true);
 			this.furColor = "WHITE"; 
 			break;
 		case "black":
+			MessageUtility.logSetter(this.getName(), "setFurColor", furColor, true);
 			this.furColor = "BLACK"; 
 			break;
+		case "gray":
+			MessageUtility.logSetter(this.getName(), "setFurColor", furColor, true);
+			this.furColor = "GRAY"; 
+			break;
 		default:
+			MessageUtility.logSetter(this.getName(), "setFurColor", furColor, false);
+			MessageUtility.logSetter(this.getName(), "setFurColor", "GRAY", true);
 			this.furColor = "GRAY";
 			break;
 		}

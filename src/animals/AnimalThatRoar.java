@@ -11,12 +11,17 @@ public abstract class AnimalThatRoar extends Animal
 		super(name,location);
 	
 	}
-	@Override
-	public boolean setDiet(IDiet diet) {
-		MessageUtility.logSetter(this.getClass().getSimpleName(), "setDiet",diet.getClass().getSimpleName(), true);
-		this.diet=diet;
 
-		// TODO Auto-generated method stub
+	public boolean setDiet(IDiet diet) 
+	{
+		if(diet != null)
+		{
+			//###### i'm not sure about value; 
+			MessageUtility.logSetter(this.getName(), "setDiet",diet.getClass().getSimpleName(), true);
+			this.diet=diet;
+			return true;
+		}
+		MessageUtility.logSetter(this.getName(), "setDiet",null, false);
 		return false;
 	}
 }

@@ -1,5 +1,6 @@
 package animals;
 
+import utilities.MessageUtility;
 import diet.IDiet;
 import mobility.Point;
 import animals.Animal;
@@ -11,8 +12,16 @@ public class AnimalThatChews extends Animal
 		super(name, location);
 	}
 
-	public boolean setDiet(IDiet diet) {
-
+	public boolean setDiet(IDiet diet) 
+	{
+		if(diet != null)
+		{
+			//###### i'm not sure about value; 
+			MessageUtility.logSetter(this.getName(), "setDiet",diet.getClass().getSimpleName(), true);
+			this.diet=diet;
+			return true;
+		}
+		MessageUtility.logSetter(this.getName(), "setDiet",null, false);
 		return false;
 	}
 }

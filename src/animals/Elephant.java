@@ -1,5 +1,9 @@
 package animals;
 
+import diet.Herbivore;
+import diet.IDiet;
+import diet.Omnivore;
+import utilities.MessageUtility;
 import mobility.Point;
 
 /**
@@ -16,8 +20,11 @@ public class Elephant extends AnimalThatChews
 	public Elephant(String name,double trunk)
 	{
 		super(name,new Point(50,90));
+		MessageUtility.logConstractor(this.getClass().getSimpleName(), name);
 		this.setWeight(500);
 		this.settrunkLength(trunk);
+		IDiet Herbi = new Herbivore();
+		super.setDiet(Herbi);
 	}
 
 	public void chew()
@@ -33,10 +40,12 @@ public class Elephant extends AnimalThatChews
 	{
 		if(trunkLength > 0.5 && trunkLength < 3)
 		{
+			MessageUtility.logSetter(this.getName(), "settrunkLength", trunkLength, true);
 			this.trunkLength = trunkLength;	
 		}
 		else
 		{
+			MessageUtility.logSetter(this.getName(), "settrunkLength", 1, false);
 			this.trunkLength = 1;
 		}
 	}

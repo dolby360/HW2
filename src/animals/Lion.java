@@ -1,5 +1,6 @@
 package animals;
 
+import utilities.MessageUtility;
 import diet.Carnivore;
 import diet.IDiet;
 import mobility.Point;
@@ -17,17 +18,20 @@ public class Lion extends AnimalThatRoar
 	public Lion(String name)
 	{
 		super(name,new Point(10,0));
+		MessageUtility.logConstractor(this.getClass().getSimpleName(), name);
 		IDiet carni = new Carnivore();
 		this.setWeight(408.2);
 		super.setDiet(carni);
 	}
 
 	
-	public int getScarCount() {
+	public int getScarCount() 
+	{
 		return scarCount;
 	}
 
-	public void setScarCount(int scarCount) {
+	public void setScarCount(int scarCount) 
+	{
 		this.scarCount = scarCount;
 	}
 }
