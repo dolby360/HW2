@@ -8,4 +8,5 @@ public interface IDiet
 {
 	public boolean canEat(EFoodType food);
 	public boolean eat(Animal animal, IEdible food);
+	public String toString();
 }

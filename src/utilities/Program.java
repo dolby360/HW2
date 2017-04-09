@@ -52,12 +52,15 @@ public class Program
 
 	}
 
-	private static void feed() {
+	private static void feed() 
+	{
 		System.out.println("********************************************");
 		System.out.println("\t\tFeed");
 		System.out.println("********************************************");
-		for (Animal animal : animals) {
-			for (IEdible f : food) {
+		for (Animal animal : animals) 
+		{
+			for (IEdible f : food) 
+			{
 				animal.eat(f);
 			}
 		}
@@ -88,17 +91,17 @@ public class Program
 
 	}
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) 
+	{
 		init();
 		testSound();
 		feed();
 		move();
 		changeValues();
-
 	}
 
-	private static void move() {
+	private static void move() 
+	{
 		System.out.println("********************************************");
 		System.out.println("\t\tMove");
 		System.out.println("********************************************");
@@ -110,10 +113,10 @@ public class Program
 		}
 
 		animals.get(0).move(new Point(10, 500));
-
 	}
 
-	private static void testSound() {
+	private static void testSound() 
+	{
 		System.out.println("********************************************");
 		System.out.println("\t\tTest Sounds");
 		System.out.println("********************************************");

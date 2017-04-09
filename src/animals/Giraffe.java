@@ -34,14 +34,14 @@ public class Giraffe extends AnimalThatChews
 	
 	public void setNeckLength(double neckLength) 
 	{
-		if(neckLength > 0)
+		if(neckLength >= 1 && neckLength <= 2.5)
 		{
 			MessageUtility.logSetter(this.getName(), "setNeckLength", neckLength, true);
 			this.neckLength = neckLength;
 		}
 		else
 		{
-			MessageUtility.logSetter(this.getName(), "setNeckLength", 0, false);
+			MessageUtility.logSetter(this.getName(), "setNeckLength", neckLength, false);
 		}
 		
 	}

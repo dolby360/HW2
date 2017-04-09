@@ -45,8 +45,7 @@ public class Elephant extends AnimalThatChews
 		}
 		else
 		{
-			MessageUtility.logSetter(this.getName(), "settrunkLength", 1, false);
-			this.trunkLength = 1;
+			MessageUtility.logSetter(this.getName(), "settrunkLength", trunkLength, false);
 		}
 	}
 }

@@ -13,6 +13,11 @@ public class Carnivore implements IDiet
 		return false;
 	}
 	
+	public String toString()
+	{
+		return "[" + this.getClass().getSimpleName() + "]";
+	}
+	
 	public boolean eat(Animal animal, IEdible food)
 	{
 		if(canEat(food.getFoodtype()))
