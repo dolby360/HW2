@@ -35,7 +35,7 @@ public class Mobile implements ILocatable
 		this.addTotalDistance(this.calcDistance(newPoint));
 		return this.calcDistance(newPoint);
 	
-}
+	}
 	
 	
 	public Point getLocation()
