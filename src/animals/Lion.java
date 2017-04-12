@@ -24,7 +24,11 @@ public class Lion extends AnimalThatRoar
 		this.setWeight(408.2);
 		super.setDiet(carni);
 	}
-
+public void roar()
+{
+	MessageUtility.logSound(this.getName(), "Roars, then stretches and shakes its mane");
+	
+}
 	public EFoodType getFoodtype() 
 	{ 
 

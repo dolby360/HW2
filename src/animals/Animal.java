@@ -55,9 +55,19 @@ public abstract class Animal extends Mobile implements IEdible
 
 	@Override
 	public EFoodType getFoodtype() {
-		//if(ty)
-		MessageUtility.logGetter(this.getClass().getSimpleName(), "getFoodType", EFoodType.VEGETABLE);
-		return EFoodType.VEGETABLE;
+
+		if(this instanceof Lion)
+		{
+
+			MessageUtility.logGetter(this.getClass().getSimpleName(), "getFoodType", EFoodType.NOTFOOD);
+			return EFoodType.NOTFOOD;
+		}
+		
+			MessageUtility.logGetter(this.getClass().getSimpleName(), "getFoodType", EFoodType.MEAT);
+			return EFoodType.MEAT;
+		
+			//			MessageUtility.logSound(this.getName(), "Stands on its hind legs, roars and scratches its belly");
+		
 	}
 
 	public double getWeight() 

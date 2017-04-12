@@ -5,7 +5,8 @@ import diet.IDiet;
 import mobility.Point;
 
 public abstract class AnimalThatRoar extends Animal
-{
+{Object a;
+	
 	public AnimalThatRoar(String name,Point location)
 	{
 		super(name,location);
@@ -16,11 +17,13 @@ public abstract class AnimalThatRoar extends Animal
 	{
 		if(this instanceof Lion)
 		{
-			MessageUtility.logSound(this.getName(), "Roars, then stretches and shakes its mane");
+		((Lion)this).roar();
 		}
 		else if(this instanceof Bear)
 		{
-			MessageUtility.logSound(this.getName(), "Stands on its hind legs, roars and scratches its belly");
+		
+			//change it
+			//MessageUtility.logSound(this.getName(), "Stands on its hind legs, roars and scratches its belly");
 		}
 	}
 	
