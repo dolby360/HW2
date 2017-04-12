@@ -2,6 +2,7 @@ package animals;
 
 import utilities.MessageUtility;
 import diet.IDiet;
+import food.EFoodType;
 import mobility.Point;
 import animals.Animal;
 
@@ -11,7 +12,7 @@ public class AnimalThatChews extends Animal
 	{
 		super(name, location);
 	}
-
+	
 	public void makeSound()
 	{
 		if(this instanceof Elephant)
@@ -40,4 +41,14 @@ public class AnimalThatChews extends Animal
 		MessageUtility.logSetter(this.getName(), "setDiet",null, false);
 		return false;
 	}
+	/*public IDiet getDiet() 
+	{
+		if(diet != null)
+		{
+			//###### i'm not sure about value; 
+			return this.diet;
+	
+	}
+			return this.diet;
+	}*/
 }

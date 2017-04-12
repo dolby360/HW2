@@ -12,6 +12,7 @@ public abstract class Animal extends Mobile implements IEdible
 	private String Name;
 	private double weight;
 	protected IDiet diet;
+	private EFoodType type;
 	public abstract void makeSound();
 	public abstract boolean setDiet(IDiet diet);
 	
@@ -30,33 +31,35 @@ public abstract class Animal extends Mobile implements IEdible
 	
 	public boolean eat(IEdible eat)
 	{
+		///change it
+		if(eat.getFoodtype()==this.getFoodtype())
+		{
+		MessageUtility.logBooleanFunction(this.getName(), "eat",eat.getFoodtype(), true);
+		return true;
+		}
 		if(eat == null)
 		{
 			return false;
 		}
-		return true;
+		makeSound();
+		
+		/*type=this.getFoodtype();
+		if(eat.getFoodtype()==type)
+			{this.eat(eat);
+			return true;
+			}
+		return false;*/
+	return true;	
 	}
 	
 
-	public EFoodType getFoodtype() 
-	{ 
-		/*
-		if(this.diet.)
-		{
-			
-		}
-		else if()
-		{
-			
-		}
-		else if()
-		{
-			
-		}
-		*/
-		return null;
+	@Override
+	public EFoodType getFoodtype() {
+		//if(ty)
+		MessageUtility.logGetter(this.getClass().getSimpleName(), "getFoodType", EFoodType.VEGETABLE);
+		return EFoodType.VEGETABLE;
 	}
-	
+
 	public double getWeight() 
 	{
 		MessageUtility.logGetter(this.getName(), "getWeight", weight);

@@ -3,6 +3,7 @@ package animals;
 import utilities.MessageUtility;
 import diet.IDiet;
 import diet.Omnivore;
+import food.EFoodType;
 import mobility.Point;
 
 
@@ -60,4 +61,9 @@ public class Bear extends AnimalThatRoar
 		}
 		
 	}
+	
+	
+	
+	
+	
 }

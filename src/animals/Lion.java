@@ -3,6 +3,7 @@ package animals;
 import utilities.MessageUtility;
 import diet.Carnivore;
 import diet.IDiet;
+import food.EFoodType;
 import mobility.Point;
 
 /**
@@ -24,6 +25,11 @@ public class Lion extends AnimalThatRoar
 		super.setDiet(carni);
 	}
 
+	public EFoodType getFoodtype() 
+	{ 
+
+		return EFoodType.NOTFOOD;
+	}
 	
 	public int getScarCount() 
 	{

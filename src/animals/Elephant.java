@@ -3,6 +3,7 @@ package animals;
 import diet.Herbivore;
 import diet.IDiet;
 import diet.Omnivore;
+import food.EFoodType;
 import utilities.MessageUtility;
 import mobility.Point;
 
@@ -30,6 +31,11 @@ public class Elephant extends AnimalThatChews
 	public void chew()
 	{
 		
+	}
+	public EFoodType getFoodtype() 
+	{ 
+
+		return EFoodType.MEAT;
 	}
 	
 	public double gettrunkLength() {
