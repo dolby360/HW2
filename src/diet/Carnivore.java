@@ -8,7 +8,7 @@ public class Carnivore implements IDiet
 {
 	public boolean canEat(EFoodType food)
 	{
-		if ((food.equals(EFoodType.MEAT))||food.equals(EFoodType.NOTFOOD))
+		if ((food==(EFoodType.MEAT)))
 			return true;
 		return false;
 	}
@@ -22,7 +22,8 @@ public class Carnivore implements IDiet
 	{
 		if(canEat(food.getFoodtype()))
 		{
-			animal.setWeight(animal.getWeight()+animal.getWeight()*0.1);
+			animal.setWeight(animal.getWeight()*1.1);
+			animal.makeSound();
 			return true;
 		}
 		return false;

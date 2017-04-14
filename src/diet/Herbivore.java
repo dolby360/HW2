@@ -22,7 +22,8 @@ public class Herbivore implements IDiet {
 	{
 		if(canEat(food.getFoodtype()))
 		{
-			animal.setWeight(animal.getWeight()+animal.getWeight()*0.7);
+			animal.setWeight(animal.getWeight()*1.7);
+			animal.makeSound();
 			return true;
 		}
 		return false;

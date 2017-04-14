@@ -4,6 +4,7 @@ import utilities.MessageUtility;
 import diet.Carnivore;
 import diet.IDiet;
 import food.EFoodType;
+import food.IEdible;
 import mobility.Point;
 
 /**
@@ -24,16 +25,29 @@ public class Lion extends AnimalThatRoar
 		this.setWeight(408.2);
 		super.setDiet(carni);
 	}
+	
+	public boolean eat(IEdible food)
+	//חיה או צמח
+	{
+		///change it
+
+		boolean flag=diet.eat(this, food);
+		MessageUtility.logBooleanFunction(this.getName(), "eat",food, flag);
+	return flag;
+	//להוסיף צלקת
+	}
+
+	
 public void roar()
 {
 	MessageUtility.logSound(this.getName(), "Roars, then stretches and shakes its mane");
 	
 }
-	public EFoodType getFoodtype() 
+	/*public EFoodType getFoodtype() 
 	{ 
 
 		return EFoodType.NOTFOOD;
-	}
+	}*/
 	
 	public int getScarCount() 
 	{

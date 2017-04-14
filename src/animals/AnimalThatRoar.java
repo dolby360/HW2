@@ -21,7 +21,8 @@ public abstract class AnimalThatRoar extends Animal
 		}
 		else if(this instanceof Bear)
 		{
-		
+			((Bear)this).roar();
+			
 			//change it
 			//MessageUtility.logSound(this.getName(), "Stands on its hind legs, roars and scratches its belly");
 		}

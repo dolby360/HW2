@@ -29,27 +29,14 @@ public abstract class Animal extends Mobile implements IEdible
 		return "[" + this.getClass().getSimpleName() + "] " + this.Name;
 	}
 	
-	public boolean eat(IEdible eat)
+	public boolean eat(IEdible food)
+	//חיה או צמח
 	{
 		///change it
-		if(eat.getFoodtype()==this.getFoodtype())
-		{
-		MessageUtility.logBooleanFunction(this.getName(), "eat",eat.getFoodtype(), true);
-		return true;
-		}
-		if(eat == null)
-		{
-			return false;
-		}
-		makeSound();
-		
-		/*type=this.getFoodtype();
-		if(eat.getFoodtype()==type)
-			{this.eat(eat);
-			return true;
-			}
-		return false;*/
-	return true;	
+
+		boolean flag=diet.eat(this, food);
+		MessageUtility.logBooleanFunction(this.getName(), "eat",food, flag);
+	return flag;
 	}
 	
 
