@@ -9,7 +9,7 @@ public class Omnivore implements IDiet
 	
 	public boolean canEat(EFoodType food)
 	{
-		if ((food.equals(EFoodType.MEAT))||food.equals(EFoodType.NOTFOOD)||(food.equals(EFoodType.VEGETABLE)))
+		if ((food.equals(EFoodType.MEAT))||food.equals(EFoodType.NOTFOOD))
 			return true;
 		return false;
 	}
@@ -25,7 +25,6 @@ public class Omnivore implements IDiet
 		EFoodType type=food.getFoodtype();
 		IDiet ca= new Carnivore();
 		IDiet he= new Herbivore();
-		animal.makeSound();
 		return !(!canEat(type)&& !he.canEat(type)&& !ca.canEat(type));
 	}
 }

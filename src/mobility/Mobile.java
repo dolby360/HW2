@@ -3,7 +3,7 @@ package mobility;
 import mobility.Point;
 import utilities.MessageUtility;
 import java.lang.Math;
-
+import animals.Animal;
 import utilities.MessageUtility;
 public class Mobile implements ILocatable
 {
@@ -27,13 +27,20 @@ public class Mobile implements ILocatable
 	public double move(Point newPoint)
 	{
 		
-	if(!(this.location.equals(null)))
+		if(!(Point.cheackBounderies(newPoint)))
+		{
+			MessageUtility.logBooleanFunction(((Animal)this).getName(), "move", newPoint, false);
 			return 0;
-		
-		MessageUtility.logSetter(this.getClass().getSimpleName(), "move", this.move(newPoint), true);
 			
+		}
+
+		double weight=((Animal)this).getWeight();
+		((Animal)this).setWeight(weight-(this.calcDistance(newPoint)*weight*0.00025));
+		MessageUtility.logBooleanFunction(((Animal)this).getName(), "move", newPoint, true);
+		this.setLocation(newPoint);			
 		this.addTotalDistance(this.calcDistance(newPoint));
 		return this.calcDistance(newPoint);
+	
 	
 	}
 	

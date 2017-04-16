@@ -46,11 +46,11 @@ public abstract class Animal extends Mobile implements IEdible
 		if(this instanceof Lion)
 		{
 
-			MessageUtility.logGetter(this.getClass().getSimpleName(), "getFoodType", EFoodType.NOTFOOD);
+			MessageUtility.logGetter(this.getName(), "getFoodType", EFoodType.NOTFOOD);
 			return EFoodType.NOTFOOD;
 		}
 		
-			MessageUtility.logGetter(this.getClass().getSimpleName(), "getFoodType", EFoodType.MEAT);
+			MessageUtility.logGetter(this.getName(), "getFoodType", EFoodType.MEAT);
 			return EFoodType.MEAT;
 		
 			//			MessageUtility.logSound(this.getName(), "Stands on its hind legs, roars and scratches its belly");

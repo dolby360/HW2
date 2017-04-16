@@ -6,7 +6,7 @@ import diet.IDiet;
 import food.EFoodType;
 import food.IEdible;
 import mobility.Point;
-
+import java.util.Random;
 /**
  * @author dolev, ben aharon,id:203723036 // partner:Reut Shukrun 208162933
  * this class use to manage Lion animal 
@@ -24,6 +24,7 @@ public class Lion extends AnimalThatRoar
 		IDiet carni = new Carnivore();
 		this.setWeight(408.2);
 		super.setDiet(carni);
+		this.setScarCount(0);
 	}
 	
 	public boolean eat(IEdible food)
@@ -32,9 +33,27 @@ public class Lion extends AnimalThatRoar
 		///change it
 
 		boolean flag=diet.eat(this, food);
+
 		MessageUtility.logBooleanFunction(this.getName(), "eat",food, flag);
-	return flag;
+	if(flag)
+	{
+		Random rand=new Random();
+		if(rand.nextInt(2)==1){
+			this.setScarCount(this.scarCount+1);
+		}
+	}
+		return flag;
 	//להוסיף צלקת
+	}
+
+	public boolean setScarCount(int scar){
+		if(scar>=0){
+			MessageUtility.logSetter(this.getName(), "setScar", scar, true);
+			this.scarCount=scar;
+			return true;
+		}
+		MessageUtility.logSetter(this.getName(), "setScar", scar, false);
+		return false;
 	}
 
 	
@@ -54,8 +73,5 @@ public void roar()
 		return scarCount;
 	}
 
-	public void setScarCount(int scarCount) 
-	{
-		this.scarCount = scarCount;
-	}
+	
 }

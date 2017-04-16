@@ -7,6 +7,6 @@ import food.IEdible;
 public interface IDiet 
 {
 	public boolean canEat(EFoodType food);
-	public boolean eat(Animal animal, IEdible food);//cat eat
+	public boolean eat(Animal animal, IEdible food);//cat ear
 	public String toString();
 }

@@ -26,11 +26,11 @@ public class Giraffe extends AnimalThatChews
 		IDiet Herbi = new Herbivore();
 		super.setDiet(Herbi);
 	}
-	public EFoodType getFoodtype() 
+	/*public EFoodType getFoodtype() 
 	{ 
 
 		return EFoodType.MEAT;
-	}
+	}*/
 	
 	public double getNeckLength() 
 	{
