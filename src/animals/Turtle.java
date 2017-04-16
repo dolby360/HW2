@@ -24,16 +24,12 @@ public class Turtle extends AnimalThatChews
 		IDiet Herbi = new Herbivore();
 		super.setDiet(Herbi);
 	}
-	public EFoodType getFoodtype() 
+/*	public EFoodType getFoodtype() 
 	{ 
 
 		return EFoodType.MEAT;
 	}
-	
-	public void chew()
-	{
-		
-	}
+	*/
 	
 	public int getAge() 
 	{

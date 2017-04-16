@@ -28,16 +28,6 @@ public class Elephant extends AnimalThatChews
 		super.setDiet(Herbi);
 	}
 
-	public void chew()
-	{
-		
-	}
-	public EFoodType getFoodtype() 
-	{ 
-
-		return EFoodType.MEAT;
-	}
-	
 	public double gettrunkLength() {
 		return trunkLength;
 	}

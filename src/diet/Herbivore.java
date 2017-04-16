@@ -8,7 +8,7 @@ public class Herbivore implements IDiet {
 
 	public boolean canEat(EFoodType food)
 	{
-		if (food.equals(EFoodType.VEGETABLE))
+		if (food==(EFoodType.VEGETABLE))
 			return true;
 		return false;
 	}
@@ -22,7 +22,7 @@ public class Herbivore implements IDiet {
 	{
 		if(canEat(food.getFoodtype()))
 		{
-			animal.setWeight(animal.getWeight()*1.7);
+			animal.setWeight(animal.getWeight()*1.07);
 			animal.makeSound();
 			return true;
 		}

@@ -27,6 +27,14 @@ public class Omnivore implements IDiet
 		EFoodType type=food.getFoodtype();
 		IDiet ca= new Carnivore();
 		IDiet he= new Herbivore();
-		return !(!canEat(type)&& !he.canEat(type)&& !ca.canEat(type));
+		if(he.canEat(type))
+		{	he.eat(animal, food);
+		return true;
+		}
+		else if(ca.canEat(type))
+			{ca.eat(animal, food);
+			return true;
+			}
+	return false;
 	}
 }
