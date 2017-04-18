@@ -29,7 +29,7 @@ public class Bear extends AnimalThatRoar
 	
 	public void roar()
 	{
-		MessageUtility.logSound(this.getName(), "Roars, then stretches and shakes its mane");
+		MessageUtility.logSound(this.getName(), "Stands on its hind legs, roars and scratches its belly");
 	}
 	
 	public String getFurColor() 
