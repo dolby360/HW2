@@ -19,7 +19,6 @@ public abstract class Animal extends Mobile implements IEdible
 	public Animal(String name,Point location)
 	{
 		super(location);
-		//###### i'm not sure about the name;
 		MessageUtility.logConstractor("Animal", name);
 		this.setName(name);
 	}
@@ -30,10 +29,7 @@ public abstract class Animal extends Mobile implements IEdible
 	}
 	
 	public boolean eat(IEdible food)
-	//חיה או צמח
 	{
-		///change it
-
 		boolean flag=diet.eat(this, food);
 		MessageUtility.logBooleanFunction(this.getName(), "eat",food, flag);
 	return flag;
@@ -53,10 +49,12 @@ public abstract class Animal extends Mobile implements IEdible
 			MessageUtility.logGetter(this.getName(), "getFoodType", EFoodType.MEAT);
 			return EFoodType.MEAT;
 		
-			//			MessageUtility.logSound(this.getName(), "Stands on its hind legs, roars and scratches its belly");
 		
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public double getWeight() 
 	{
 		MessageUtility.logGetter(this.getName(), "getWeight", weight);
@@ -91,14 +89,12 @@ public abstract class Animal extends Mobile implements IEdible
 	{
 		return this.Name;
 	}
-	
-	/*public boolean setDiet(String name) {
-		if(name==null)
-			return false;
-		MessageUtility.logSetter(this.getClass().getSimpleName(), "setName", setName(name), true);
-		this.name = name;
-		return true;
+	public EFoodType getType() {
+		return type;
 	}
-*/
+	public void setType(EFoodType type) {
+		this.type = type;
+	}
+	
 
 }

@@ -2,7 +2,6 @@ package animals;
 
 import diet.Herbivore;
 import diet.IDiet;
-import food.EFoodType;
 import utilities.MessageUtility;
 import mobility.Point;
 
@@ -24,12 +23,10 @@ public class Turtle extends AnimalThatChews
 		IDiet Herbi = new Herbivore();
 		super.setDiet(Herbi);
 	}
-/*	public EFoodType getFoodtype() 
-	{ 
-
-		return EFoodType.MEAT;
+	public void chew()
+	{
+		MessageUtility.logSound(this.getName(), "Retracts its head in then eats quietly");
 	}
-	*/
 	
 	public int getAge() 
 	{

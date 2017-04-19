@@ -2,7 +2,6 @@ package animals;
 
 import diet.Herbivore;
 import diet.IDiet;
-import food.EFoodType;
 import utilities.MessageUtility;
 import mobility.Point;
 
@@ -26,11 +25,10 @@ public class Giraffe extends AnimalThatChews
 		IDiet Herbi = new Herbivore();
 		super.setDiet(Herbi);
 	}
-	/*public EFoodType getFoodtype() 
-	{ 
-
-		return EFoodType.MEAT;
-	}*/
+	public void chew()
+	{
+		MessageUtility.logSound(this.getName(), "Bleats and Stomps its legs, then chews");
+	}
 	
 	public double getNeckLength() 
 	{

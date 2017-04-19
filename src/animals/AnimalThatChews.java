@@ -2,7 +2,6 @@ package animals;
 
 import utilities.MessageUtility;
 import diet.IDiet;
-import food.EFoodType;
 import mobility.Point;
 import animals.Animal;
 
@@ -17,15 +16,15 @@ public class AnimalThatChews extends Animal
 	{
 		if(this instanceof Elephant)
 		{
-			MessageUtility.logSound(this.getName(), "Trumpets with joy while flapping its ears, then chews");
+			((Elephant)this).chew();
 		}
 		else if(this instanceof Giraffe)
 		{
-			MessageUtility.logSound(this.getName(), "Bleats and Stomps its legs, then chews");
+			((Giraffe)this).chew();
 		}
 		else if(this instanceof Turtle)
 		{
-			MessageUtility.logSound(this.getName(), "Retracts its head in then eats quietly");
+			((Turtle)this).chew();
 		}
 	}
 	
@@ -33,7 +32,6 @@ public class AnimalThatChews extends Animal
 	{
 		if(diet != null)
 		{
-			//###### i'm not sure about value; 
 			MessageUtility.logSetter(this.getName(), "setDiet",diet, true);
 			this.diet=diet;
 			return true;
@@ -41,14 +39,5 @@ public class AnimalThatChews extends Animal
 		MessageUtility.logSetter(this.getName(), "setDiet",null, false);
 		return false;
 	}
-	/*public IDiet getDiet() 
-	{
-		if(diet != null)
-		{
-			//###### i'm not sure about value; 
-			return this.diet;
 	
-	}
-			return this.diet;
-	}*/
 }

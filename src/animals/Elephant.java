@@ -2,8 +2,6 @@ package animals;
 
 import diet.Herbivore;
 import diet.IDiet;
-import diet.Omnivore;
-import food.EFoodType;
 import utilities.MessageUtility;
 import mobility.Point;
 
@@ -31,7 +29,10 @@ public class Elephant extends AnimalThatChews
 	public double gettrunkLength() {
 		return trunkLength;
 	}
-
+	public void chew()
+	{
+		MessageUtility.logSound(this.getName(), "Trumpets with joy while flapping its ears, then chews");
+	}
 	public void settrunkLength(double trunkLength) 
 	{
 		if(trunkLength > 0.5 && trunkLength < 3)

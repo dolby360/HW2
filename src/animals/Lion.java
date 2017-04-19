@@ -3,7 +3,6 @@ package animals;
 import utilities.MessageUtility;
 import diet.Carnivore;
 import diet.IDiet;
-import food.EFoodType;
 import food.IEdible;
 import mobility.Point;
 import java.util.Random;
@@ -28,10 +27,7 @@ public class Lion extends AnimalThatRoar
 	}
 	
 	public boolean eat(IEdible food)
-	//חיה או צמח
 	{
-		///change it
-
 		boolean flag=diet.eat(this, food);
 
 		MessageUtility.logBooleanFunction(this.getName(), "eat",food, flag);
@@ -43,7 +39,6 @@ public class Lion extends AnimalThatRoar
 		}
 	}
 		return flag;
-	//להוסיף צלקת
 	}
 
 	public boolean setScarCount(int scar){
@@ -62,11 +57,6 @@ public void roar()
 	MessageUtility.logSound(this.getName(), "Roars, then stretches and shakes its mane");
 	
 }
-	/*public EFoodType getFoodtype() 
-	{ 
-
-		return EFoodType.NOTFOOD;
-	}*/
 	
 	public int getScarCount() 
 	{

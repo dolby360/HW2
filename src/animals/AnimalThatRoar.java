@@ -5,7 +5,7 @@ import diet.IDiet;
 import mobility.Point;
 
 public abstract class AnimalThatRoar extends Animal
-{Object a;
+{
 	
 	public AnimalThatRoar(String name,Point location)
 	{
@@ -23,8 +23,7 @@ public abstract class AnimalThatRoar extends Animal
 		{
 			((Bear)this).roar();
 			
-			//change it
-			//MessageUtility.logSound(this.getName(), "Stands on its hind legs, roars and scratches its belly");
+			
 		}
 	}
 	
@@ -32,7 +31,7 @@ public abstract class AnimalThatRoar extends Animal
 	{
 		if(diet != null)
 		{
-			//###### i'm not sure about value; 
+			
 			MessageUtility.logSetter(this.getName(), "setDiet",diet, true);
 			this.diet=diet;
 			return true;

@@ -25,7 +25,7 @@ public class MessageUtility {
 		if (isSuccess) {
 			System.out.println(str);
 		} else {
-			System.out.println(str);
+			System.err.println(str);
 		}
 	}
 
@@ -67,14 +67,14 @@ public class MessageUtility {
 	 *            - Did the assignment take place
 	 */
 	public static void logSetter(String name, String funcName, Object value, boolean isSuccess) {
-		String str = "[s]" + name + ":  \t\t" + funcName + "(" + value + ") => " + isSuccess;
+		String str = "[s]" + name + ":  \t" + funcName + "(" + value + ") => " + isSuccess;
 		if (isSuccess) 
 		{
 			System.out.println(str);
 		} 
 		else 
 		{
-			System.out.println(str);
+			System.err.println(str);
 		}
 
 	}

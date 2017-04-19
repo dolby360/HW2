@@ -20,7 +20,7 @@ public class Omnivore implements IDiet
 	{
 		return "[" + this.getClass().getSimpleName() + "]";
 	}
-	//CHANGE
+	
 
 	public boolean eat(Animal animal, IEdible food)
 	{
