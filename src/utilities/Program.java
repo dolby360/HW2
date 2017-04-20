@@ -120,10 +120,9 @@ public class Program
 		System.out.println("********************************************");
 		System.out.println("\t\tTest Sounds");
 		System.out.println("********************************************");
-		for (Animal animal : animals) {
+		for (Animal animal : animals) 
+		{
 			animal.makeSound();
 		}
-
 	}
-
 }

@@ -20,6 +20,7 @@ public class Carnivore implements IDiet
 			return true;
 		return false;
 	}
+	
 	/**
 	 * toString- 
 	 * Prints the simple name of the class
@@ -28,14 +29,12 @@ public class Carnivore implements IDiet
 	{
 		return "[" + this.getClass().getSimpleName() + "]";
 	}
+	
 	/**
-	 * eat-
-	 * 		call the function CatEat, if True- calling the actions the animal do after eating(change weight, making sound)
-	 * @param animal
-	 * @param food- the food sent to the animal
-	 * 
-	 * @return True- if the animal eat
-	 * 		False- If the animal didn't eat
+	 * eat - call the function CatEat, if True - calling the actions the animal do after eating(change weight, making sound)
+	 * @param animal to feed
+	 * @param food - the food sent to the animal
+	 * @return True- if the animal eat False- If the animal didn't eat
 	 */
 	public boolean eat(Animal animal, IEdible food)
 	{

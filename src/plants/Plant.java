@@ -27,7 +27,7 @@ public abstract class Plant implements IEdible, ILocatable {
 	private double weight;
 
 	/**
-	 * 
+	 * Plant constructor
 	 */
 	public Plant() {
 		Random rand = new Random();
@@ -51,7 +51,7 @@ public abstract class Plant implements IEdible, ILocatable {
 	}
 
 	/**
-	 * @return
+	 * @return plant height
 	 */
 	public double getHeight() {
 		MessageUtility.logGetter(this.getClass().getSimpleName(), "getHeight", this.height);
@@ -70,7 +70,7 @@ public abstract class Plant implements IEdible, ILocatable {
 	}
 
 	/**
-	 * @return
+	 * @return weight of plant
 	 */
 	public double getWeight() {
 		MessageUtility.logGetter(this.getClass().getSimpleName(), "getWeight", this.weight);
@@ -78,15 +78,18 @@ public abstract class Plant implements IEdible, ILocatable {
 	}
 
 	/**
-	 * @param height
-	 * @return
+	 * @param height - plant height
+	 * @return height of plant
 	 */
-	public boolean setHeight(double height) {
-
+	public boolean setHeight(double height) 
+	{
 		boolean isSuccess = (height >= 0);
-		if (isSuccess) {
+		if (isSuccess) 
+		{
 			this.height = height;
-		} else {
+		} 
+		else 
+		{
 			this.height = 0;
 		}
 		MessageUtility.logSetter(this.getClass().getSimpleName(), "setHeight", height, isSuccess);
@@ -99,7 +102,8 @@ public abstract class Plant implements IEdible, ILocatable {
 	 * @see mobility.ILocatable#setLocation(mobility.Point)
 	 */
 	@Override
-	public boolean setLocation(Point newLocation) {
+	public boolean setLocation(Point newLocation) 
+	{
 		boolean isSuccess = Point.cheackBounderies(newLocation);
 		if (isSuccess) 
 		{
@@ -110,14 +114,19 @@ public abstract class Plant implements IEdible, ILocatable {
 	}
 
 	/**
-	 * @param weight
-	 * @return
+	 * set the weight of plant
+	 * @param weight - plant weight
+	 * @return true or false (true if weight grater then 0)
 	 */
-	public boolean setWeight(double weight) {
+	public boolean setWeight(double weight) 
+	{
 		boolean isSuccess = (weight >= 0);
-		if (isSuccess) {
+		if (isSuccess) 
+		{
 			this.weight = weight;
-		} else {
+		} 
+		else 
+		{
 			this.weight = 0;
 		}
 		MessageUtility.logSetter(this.getClass().getSimpleName(), "setWeight", weight, isSuccess);

@@ -4,11 +4,11 @@ import mobility.Point;
 import utilities.MessageUtility;
 import java.lang.Math;
 import animals.Animal;
-import utilities.MessageUtility;
 public class Mobile implements ILocatable
 {
 	private Point location;
 	private double totalDistance;
+	
 	/**
 	 * Constructor-Mobile:Intializing the location of the animal according the location received
 	 * @param location
@@ -25,7 +25,7 @@ public class Mobile implements ILocatable
 	 */
 	public void addTotalDistance(double dist)
 	{
-		this.totalDistance+=dist;
+		this.setTotalDistance(this.getTotalDistance() + dist);
 	}
 	/**
 	 * calcDistance- calculating the distance between the old location of the animal and the new one(received-newPoint)
@@ -40,8 +40,8 @@ public class Mobile implements ILocatable
 	}
 	/**
 	 * move- If the Point valid- the function move the location of the animal t the new location, and do actions after moving(cange weight,calculate and update distance)
-	 * @param newPoint
-	 * @return
+	 * @param newPoint represent location
+	 * @return distance the animal moved
 	 */
 	public double move(Point newPoint)
 	{
@@ -50,7 +50,6 @@ public class Mobile implements ILocatable
 		{
 			MessageUtility.logBooleanFunction(((Animal)this).getName(), "move", newPoint, false);
 			return 0;
-			
 		}
 
 		double weight=((Animal)this).getWeight();
@@ -81,6 +80,25 @@ public class Mobile implements ILocatable
 		this.location.setX(newLocation.getX());
 		this.location.setY(newLocation.getY());
 		return true;	
+	}
+
+	public double getTotalDistance() {
+		return totalDistance;
+	}
+	
+	/**
+	 * set the total distance the animal walked
+	 * @param totalDistance - set the total distance for animal
+	 * @return true or false (true if totalDistance grater then 0)
+	 */
+	public boolean setTotalDistance(double totalDistance) 
+	{
+		if(totalDistance >= 0)
+		{
+			this.totalDistance = totalDistance;
+			return true;
+		}
+		return false;
 	}
 
 }

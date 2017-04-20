@@ -49,8 +49,7 @@ public class Bear extends AnimalThatRoar
 	}
 /**
  * 
- * @param furColor
- * 			Initials and prints the color of the animal according the color received
+ * @param furColor - Initials and prints the color of the animal according the color received
  */
 	public void setFurColor(String furColor) {
 		switch (furColor.toLowerCase())

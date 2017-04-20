@@ -32,10 +32,9 @@ public abstract class AnimalThatRoar extends Animal
 		else if(this instanceof Bear)
 		{
 			((Bear)this).roar();
-			
-			
 		}
 	}
+	
 	/**
 	 * If the diet received is valid(not null)- changing the animal's diet exist
 	 * @return True- If there was a changing

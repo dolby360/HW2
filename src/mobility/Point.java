@@ -122,8 +122,8 @@ public class Point
 	/**
 	* copy constructor 
 	* @param other other object to copy
+	* @return true or false  (false if other equals null) 
 	*/
-
 	public boolean equals(Point other)
 	{
 		if(other==null)

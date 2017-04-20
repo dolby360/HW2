@@ -6,6 +6,7 @@ import food.IEdible;
 
 public class Omnivore implements IDiet
 {
+	
 	/**
 	 * CanEat- Check if the food for the animal matches the food it can to eat
 	 * @param food
@@ -14,7 +15,6 @@ public class Omnivore implements IDiet
 	 * 			-False: If the food does not match to the animal
 	 * 
 	 */
-	
 	public boolean canEat(EFoodType food)
 	{
 		if ((food.equals(EFoodType.MEAT))||food.equals(EFoodType.NOTFOOD))
@@ -23,26 +23,24 @@ public class Omnivore implements IDiet
 		}
 		return false;
 	}
+	
 	/**
 	 * toString- 
 	 * Prints the simple name of the class
 	 */
-	
 	public String toString()
 	{
 		return "[" + this.getClass().getSimpleName() + "]";
 	}
 	
 	/**
-	 * eat-
-	 * 		call the function CatEat, if True- calling the actions the animal do after eating(change weight, making sound)
-	 * @param animal
+	 * eat - call the function CatEat, if True- calling the actions the animal do after eating(change weight, making sound)
+	 * @param animal to feed
 	 * @param food- the food sent to the animal
 	 * 
 	 * @return True- if the animal eat
 	 * 		False- If the animal didn't eat
 	 */
-	
 	public boolean eat(Animal animal, IEdible food)
 	{
 		EFoodType type=food.getFoodtype();

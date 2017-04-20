@@ -18,8 +18,9 @@ public class AnimalThatChews extends Animal
 	{
 		super(name, location);
 	}
+	
 	/**
-	 * makeSound- Calling the function that making sound-"chew" according the instance type of the animal
+	 * makeSound - Calling the function that making sound-"chew" according the instance type of the animal
 	 */
 	public void makeSound()
 	{
@@ -36,6 +37,7 @@ public class AnimalThatChews extends Animal
 			((Turtle)this).chew();
 		}
 	}
+	
 	/**
 	 * If the diet received is valid(not null)- changing the animal's diet exist
 	 * @return True- If there was a changing
