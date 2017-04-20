@@ -13,7 +13,13 @@ import mobility.Point;
 public class Turtle extends AnimalThatChews
 {
 	private int Age = 0;
-	
+	/**
+	 * Turtule- Constructor- Initialing a Thrtule (by using the super class)
+	 * @param name
+	 * 		The name of the Turtule
+	 * @param age
+	 * 		The age of the Turtule
+	 */
 	public Turtle(String name,int age)
 	{
 		super(name,new Point(80,0));
@@ -23,17 +29,29 @@ public class Turtle extends AnimalThatChews
 		IDiet Herbi = new Herbivore();
 		super.setDiet(Herbi);
 	}
+	/**
+	 * chew-Prints the actions the animal does when it chews
+	 */
+	
 	public void chew()
 	{
 		MessageUtility.logSound(this.getName(), "Retracts its head in then eats quietly");
 	}
-	
+	/**
+	 * 
+	 * @return and prints the age of the Turtle
+	 */
 	public int getAge() 
 	{
 		MessageUtility.logGetter(this.getName(), "getAge", Age);
 		return Age;
 	}
-	
+	/**
+	 * If the age received is valid- changing the exist age to the new one 
+	 * @param age
+	 * 		The new age of the Turtle
+	 */
+	//Dolev
 	public void setAge(int age) 
 	{
 		if (age > 0)

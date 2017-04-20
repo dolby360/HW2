@@ -15,7 +15,14 @@ public abstract class Animal extends Mobile implements IEdible
 	private EFoodType type;
 	public abstract void makeSound();
 	public abstract boolean setDiet(IDiet diet);
-	
+	/**
+	 * Constructor-Initializing animal
+	 * @param name
+	 * 			-Name of animal
+	 * 
+	 * @param location
+	 * 			-location of animal
+	 */
 	public Animal(String name,Point location)
 	{
 		super(location);
