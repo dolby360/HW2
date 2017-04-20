@@ -15,7 +15,11 @@ import java.util.Random;
 public class Lion extends AnimalThatRoar
 {
 	private int scarCount = 0;
-	
+	/**
+	 * Lion- Constructor- Initialing a Lion (by using the super class)
+	 * @param name
+	 * 		The name of the Lion
+	 */
 	public Lion(String name)
 	{
 		super(name,new Point(10,0));
@@ -25,7 +29,7 @@ public class Lion extends AnimalThatRoar
 		super.setDiet(carni);
 		this.setScarCount(0);
 	}
-	
+	//Dolev
 	public boolean eat(IEdible food)
 	{
 		boolean flag=diet.eat(this, food);
@@ -40,7 +44,14 @@ public class Lion extends AnimalThatRoar
 	}
 		return flag;
 	}
-
+/**
+ * IF the scar receives is valid- changing the count of the Lion's scars to the value received
+ * @param scar
+ * @return True-
+ * 		If there was a changing
+ * 		False-
+ * 		If there wasn't a changing
+ */
 	public boolean setScarCount(int scar){
 		if(scar>=0){
 			MessageUtility.logSetter(this.getName(), "setScar", scar, true);
@@ -51,13 +62,18 @@ public class Lion extends AnimalThatRoar
 		return false;
 	}
 
-	
+	/**
+	 * roar-Prints the actions the animal does when it roars
+	 */	
 public void roar()
 {
 	MessageUtility.logSound(this.getName(), "Roars, then stretches and shakes its mane");
 	
 }
-	
+	/**
+	 * 
+	 * @return the count of the Lion's scars 
+	 */
 	public int getScarCount() 
 	{
 		return scarCount;

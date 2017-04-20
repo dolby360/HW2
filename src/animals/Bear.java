@@ -15,7 +15,13 @@ import mobility.Point;
 public class Bear extends AnimalThatRoar 
 {	
 	private String furColor = null;
-		
+	/**
+	 * 	Bear-COnstructor- Initialing a Bear (by using the super class)
+	 * @param name
+	 * 			The name of the Bear
+	 * @param color
+	 * 			The color of the animal
+	 */
 	public Bear(String name,String color)
 	{
 		super(name,new Point(100,5));
@@ -25,18 +31,27 @@ public class Bear extends AnimalThatRoar
 		IDiet Omni = new Omnivore();
 		super.setDiet(Omni);
 	}
-	
+	/**
+	 * roar-Prints the actions the animal does when it roars
+	 */
 	public void roar()
 	{
 		MessageUtility.logSound(this.getName(), "Stands on its hind legs, roars and scratches its belly");
 	}
-	
+	/**
+	 * 
+	 * @return and prints the color of the animal
+	 */
 	public String getFurColor() 
 	{
 		MessageUtility.logGetter(this.getName(), "getFurColor", getFurColor());
 		return furColor;
 	}
-
+/**
+ * 
+ * @param furColor
+ * 			Initials and prints the color of the animal according the color received
+ */
 	public void setFurColor(String furColor) {
 		switch (furColor.toLowerCase())
 		{
