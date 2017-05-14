@@ -5,7 +5,7 @@ import diet.IDiet;
 import diet.Omnivore;
 import mobility.Point;
 
-
+//cdcd
 /**
  * @author dolev, ben aharon,id:203723036 // partner:Reut Shukrun 208162933
  * this class use to manage Bear animal 
